@@ -1,0 +1,101 @@
+.custom-navbar {
+    background: #fff;
+
+    &__features {
+        background: var(--bs-primary);
+        width: 100%;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 6px 0;
+
+            @media (min-width: 531px) {
+                flex-direction: row;
+                padding: 16px 0;
+            }
+
+            li {
+                display: inline-flex;
+                color: #fff;
+                font-size: 13px;
+                font-weight: 300;
+
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+
+                @media (min-width: 532px) {
+                    margin-right: 20px !important;
+                }
+
+                svg {
+                    font-size: 20px;
+                    margin-right: 5px;
+
+                    &[class*="rotate"] {
+                        transform: rotate(260deg) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &__right {
+        ul {
+            display: flex;
+
+            li {
+                list-style: none;
+                margin-right: 40px;
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: var(--bs-primary);
+                    font-weight: 300;
+                    text-decoration: none;
+
+                    svg {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar {
+        max-width: 1700px;
+
+        &-brand {
+            img {
+                max-height: 60px;
+            }
+        }
+
+        &-toggler {
+            border: 0;
+            box-shadow: none;
+        }
+
+        .nav-item {
+            .nav-link {
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity 0.7s;
+    }
+
+    .fade-enter,
+    .fade-leave-to {
+        opacity: 0;
+    }
+}

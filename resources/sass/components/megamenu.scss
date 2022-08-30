@@ -1,0 +1,38 @@
+.mega-menu {
+    background: #fff;
+    padding: 20px 10px;
+
+    &__list {
+        display: inline-flex;
+        flex-direction: column;
+        list-style: none;
+        margin-bottom: 0;
+
+        &:not(:last-child) {
+            padding-right: 50px;
+        }
+
+        &-item {
+            margin: 5px 0;
+            font-weight: 200;
+
+            &--primary {
+                position: relative;
+                font-weight: 700;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    border-bottom: 2px solid #f35711;
+                    width: 29px;
+                    left: 0;
+                    bottom: -2px;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
