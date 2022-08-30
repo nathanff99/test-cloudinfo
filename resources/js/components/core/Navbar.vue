@@ -47,7 +47,7 @@
         <ul class="mb-0">
           <li>
             <a href="#">
-              <i class="iconify" data-icon="mdi-account"></i> Olá Nelma
+              <i class="iconify" data-icon="mdi-account-outline"></i> Olá Nelma
             </a>
           </li>
           <li>
@@ -196,7 +196,7 @@ export default {
 
   .fade-enter-active,
   .fade-leave-active {
-    transition: opacity 1s;
+    transition: opacity 0.7s;
   }
   .fade-enter, .fade-leave-to {
     opacity: 0;
