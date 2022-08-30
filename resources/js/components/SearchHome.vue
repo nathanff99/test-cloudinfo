@@ -1,9 +1,9 @@
 <template>
-  <div class="search container-fluid py-5 text-center">
-    <h1 class="search__title mb-5 text-primary">
+  <div class="search-home canidelo-container py-5 text-center">
+    <h1 class="search-home__title mb-5 text-primary">
       A sua Farmácia nunca esteve tão perto de si!
     </h1>
-    <div class="search__form">
+    <div class="search-home__form">
       <div class="row justify-content-center row">
         <div class="col-12 col-lg-9 col-xxl-9">
           <div class="input-group mb-3">
@@ -30,14 +30,12 @@
 
 <script>
 export default {
-  name: "search",
+  name: "search-home",
 };
 </script>
 
 <style lang="scss" scoped>
-.search {
-  max-width: 1700px;
-
+.search-home {
   &__title {
     font-weight: 600;
   }
