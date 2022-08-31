@@ -6,7 +6,7 @@
   >
     <VueSlickCarousel v-bind="carouselOptions">
       <div v-for="banner in banners" :key="banner.id">
-        <img :src="banner.src" class="d-block w-100" :alt="banner.title" />
+        <img :src="banner.img_src" class="d-block w-100" :alt="banner.title" />
       </div>
     </VueSlickCarousel>
   </section>

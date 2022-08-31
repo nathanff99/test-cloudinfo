@@ -2,11 +2,11 @@
     {
         "id": 1,
         "title": "Desconto 20% desmaquilantes",
-        "src": "/images/desconto-desmaquilantes-banner.webp"
+        "img_src": "/images/desconto-desmaquilantes-banner.webp"
     },
     {
         "id": 2,
         "title": "Desconto 20% desmaquilantes",
-        "src": "/images/desconto-desmaquilantes-banner.webp"
+        "img_src": "/images/desconto-desmaquilantes-banner.webp"
     }
 ]
