@@ -5,7 +5,7 @@
         "price": 18.50,
         "discount": 20,
         "stock": 100,
-        "src": "/images/test-product-blue.webp"
+        "img_src": "/images/test-product-blue.webp"
     },
     {
         "id": 2,
@@ -13,23 +13,23 @@
         "price": 20,
         "discount": 15,
         "stock": 100,
-        "src": "/images/test-product-blue.webp"
+        "img_src": "/images/test-product-blue.webp"
     },
     {
         "id": 3,
         "title": "Avéne Homem Bálsamo Hidratante, 75 ML",
         "price": 25,
-        "discount": 20,
-        "stock": 100,
-        "src": "/images/test-product-green.webp"
+        "discount": 0,
+        "stock": 0,
+        "img_src": "/images/test-product-green.webp"
     },
     {
         "id": 4,
         "title": "Avéne Homem Bálsamo Hidratante, 75 ML",
         "price": 22,
-        "discount": 20,
+        "discount": 0,
         "stock": 100,
-        "src": "/images/test-product-orange.webp"
+        "img_src": "/images/test-product-orange.webp"
     },
     {
         "id": 5,
@@ -37,15 +37,15 @@
         "price": 22,
         "discount": 20,
         "stock": 100,
-        "src": "/images/test-product-orange.webp"
+        "img_src": "/images/test-product-orange.webp"
     },
     {
         "id": 6,
         "title": "Avéne Homem Bálsamo Hidratante, 75 ML",
         "price": 22,
-        "discount": 20,
+        "discount": 0,
         "stock": 100,
-        "src": "/images/test-product-orange.webp"
+        "img_src": "/images/test-product-orange.webp"
     },
     {
         "id": 7,
@@ -53,6 +53,6 @@
         "price": 18.50,
         "discount": 20,
         "stock": 100,
-        "src": "/images/test-product-blue.webp"
+        "img_src": "/images/test-product-blue.webp"
     }
 ]
