@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Coronavírus",
+        "subtitle": "O que saber?",
+        "category": "Saúde",
+        "date": "12 de março de 2020",
+        "description": "O Coronavírus 2019-nCoV está a espalhar-se por todo o mundo com a transmissão entre pessoas. É importante detectar os sintomas e tomar as devidas precauções. Saiba mais no nosso artigo.",
+        "img_src": "/images/posts/coronavirus.webp"
+    },
+    {
+        "id": 2,
+        "title": "Inverno",
+        "subtitle": "Com se preparar!",
+        "category": "Saúde",
+        "date": "12 de março de 2020",
+        "description": "O sistema imunitário está sempre alerta para nos proteger de ameaças externas. Veja aqui alguns conselhos que podem fazer a diferença para se sentir melhor.",
+        "img_src": "/images/posts/inverno.webp"
+    },
+    {
+        "id": 3,
+        "title": "Piolhos",
+        "subtitle": "Como prevenir!",
+        "category": "Cabelo",
+        "date": "12 de março de 2020",
+        "description": "Quando chega a altura da escola muitas vezes aparecem também os piolhos. Saiba o que pode fazer para prevenir e manter os piolhos afastados!",
+        "img_src": "/images/posts/piolhos.webp"
+    },
+    {
+        "id": 4,
+        "title": "Amamentação",
+        "subtitle": "Tudo o que precisa saber",
+        "category": "Maternidade",
+        "date": "12 de março de 2020",
+        "description": "O Coronavírus 2019-nCoV está a espalhar-se por todo o mundo com a transmissão entre pessoas. É importante detectar os sintomas e tomar as devidas precauções. Saiba mais no nosso artigo.",
+        "img_src": "/images/posts/amamentacao.webp"
+    }
+]

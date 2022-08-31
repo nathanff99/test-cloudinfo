@@ -9,4 +9,10 @@ class ApiController extends Controller
 
         return file_get_contents(storage_path('testing/json/products.json'));
     }
+
+    public function posts()
+    {
+
+        return file_get_contents(storage_path('testing/json/posts.json'));
+    }
 }

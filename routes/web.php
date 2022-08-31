@@ -18,5 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
 
-Route::get('/products', [ApiController::class, 'products'])
-    ->name('products');
+// Fake API
+Route::get('/products', [ApiController::class, 'products']);
+Route::get('/posts', [ApiController::class, 'posts']);
