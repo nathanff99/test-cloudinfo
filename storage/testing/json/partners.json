@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "EAU Thermale Avène",
+        "img_src": "/images/partners/avene-emblema.webp"
+    },
+    {
+        "id": 2,
+        "name": "Philips Avent",
+        "img_src": "/images/partners/philips-avent.webp"
+    },
+    {
+        "id": 3,
+        "name": "Bioderma",
+        "img_src": "/images/partners/bioderma.webp"
+    },
+    {
+        "id": 4,
+        "name": "Caudalíe",
+        "img_src": "/images/partners/caudalie.webp"
+    },
+    {
+        "id": 5,
+        "name": "Chicco",
+        "img_src": "/images/partners/chicco.webp"
+    },
+    {
+        "id": 6,
+        "name": "Filorga",
+        "img_src": "/images/partners/filorga.webp"
+    }
+]
