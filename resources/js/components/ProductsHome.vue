@@ -1,5 +1,5 @@
 <template>
-  <section class="products-home canidelo-container px-lg-9 mb-5">
+  <section class="products-home canidelo-container px-lg-9 mb-7">
     <h2 class="text-center text-uppercase fw-semibold text-primary mb-2">
       {{ title }}
     </h2>
