@@ -1,0 +1,49 @@
+.products-home {
+    margin-bottom: 60px;
+
+    @media (min-width: 992px) {
+        padding: 0 5rem;
+    }
+
+    &__title {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        font-weight: 500;
+    }
+
+    &__carousel {
+        position: relative;
+        padding: 1rem 0;
+
+        &-arrow {
+            display: none;
+
+            @media (min-width: 992px) {
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 35px;
+                height: 35px;
+                font-size: 35px;
+                line-height: 35px;
+                background: #fff;
+                color: var(--bs-primary);
+                border-radius: 50%;
+                cursor: pointer;
+
+                &--left {
+                    left: -50px;
+                }
+
+                &--right {
+                    right: -50px;
+                }
+            }
+        }
+    }
+}

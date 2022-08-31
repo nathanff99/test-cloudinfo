@@ -24,7 +24,10 @@
 <body>
     <div id="app">
         <navbar></navbar>
-        @yield('content')
+
+        <main>
+            @yield('content')
+        </main>
     </div>
 </body>
 
