@@ -14,6 +14,7 @@ Vue.component('navbar', () => import('./components/core/Navbar.vue'));
 Vue.component('banner-full-width', () => import('./components/BannerFullWidth.vue'));
 Vue.component('search-home', () => import('./components/SearchHome.vue'));
 Vue.component('products-home', () => import('./components/ProductsHome.vue'));
+Vue.component('blog-home', () => import('./components/BlogHome.vue'));
 
 new Vue({
     el: '#app',

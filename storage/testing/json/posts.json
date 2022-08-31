@@ -34,5 +34,23 @@
         "date": "12 de março de 2020",
         "description": "O Coronavírus 2019-nCoV está a espalhar-se por todo o mundo com a transmissão entre pessoas. É importante detectar os sintomas e tomar as devidas precauções. Saiba mais no nosso artigo.",
         "img_src": "/images/posts/amamentacao.webp"
+    },
+    {
+        "id": 5,
+        "title": "Coronavírus",
+        "subtitle": "O que saber?",
+        "category": "Saúde",
+        "date": "12 de março de 2020",
+        "description": "O Coronavírus 2019-nCoV está a espalhar-se por todo o mundo com a transmissão entre pessoas. É importante detectar os sintomas e tomar as devidas precauções. Saiba mais no nosso artigo.",
+        "img_src": "/images/posts/coronavirus.webp"
+    },
+    {
+        "id": 6,
+        "title": "Piolhos",
+        "subtitle": "Como prevenir!",
+        "category": "Cabelo",
+        "date": "12 de março de 2020",
+        "description": "Quando chega a altura da escola muitas vezes aparecem também os piolhos. Saiba o que pode fazer para prevenir e manter os piolhos afastados!",
+        "img_src": "/images/posts/piolhos.webp"
     }
 ]
