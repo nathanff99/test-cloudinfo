@@ -1,5 +1,5 @@
 <template>
-  <div class="partners-home bg-white pb-8 pt-6">
+  <section class="partners-home bg-white pb-8 pt-6">
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div
@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
