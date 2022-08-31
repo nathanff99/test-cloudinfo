@@ -1,5 +1,5 @@
 <template>
-  <section class="partners-home bg-white pb-8 pt-6">
+  <section class="partners-home bg-white pb-9 pt-5">
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div
