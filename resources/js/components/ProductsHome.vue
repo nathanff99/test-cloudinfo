@@ -74,31 +74,28 @@ export default {
       carouselOptions: {
         dots: false,
         arrows: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 5,
-        slidesToScroll: 5,
+        slidesToScroll: 1,
         initialSlide: 0,
         responsive: [
           {
             breakpoint: 1400,
             settings: {
               slidesToShow: 4,
-              slidesToScroll: 4,
             },
           },
           {
             breakpoint: 1200,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 3,
             },
           },
           {
             breakpoint: 991,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 3,
               initialSlide: 1,
               dots: true,
             },
@@ -107,7 +104,6 @@ export default {
             breakpoint: 768,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 2,
               initialSlide: 1,
               dots: true,
             },
@@ -116,7 +112,6 @@ export default {
             breakpoint: 576,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1,
               dots: true,
             },
           },
@@ -156,23 +151,25 @@ export default {
 </style>
 
 <style lang="scss">
-.slick-slide {
-  padding: 0 9px;
-}
+.products-home {
+  .slick-slide {
+    padding: 0 9px;
+  }
 
-.slick-dots {
-  bottom: -35px;
+  .slick-dots {
+    bottom: -35px;
 
-  li {
-    button {
-      &:before {
-        font-size: 10px;
-      }
-    }
-    &.slick-active {
+    li {
       button {
         &:before {
-          font-size: 15px;
+          font-size: 10px;
+        }
+      }
+      &.slick-active {
+        button {
+          &:before {
+            font-size: 15px;
+          }
         }
       }
     }
