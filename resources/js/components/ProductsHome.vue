@@ -1,57 +1,39 @@
 <template>
-  <section class="products-home canidelo-container">
-    <h2 class="products-home__title text-center text-primary">{{ title }}</h2>
-    <p v-if="subtitle" class="products-home__subtitle text-center">
+  <section class="products-home canidelo-container px-lg-9 mb-5">
+    <h2 class="text-center text-uppercase fw-semibold text-primary mb-2">
+      {{ title }}
+    </h2>
+    <p v-if="subtitle" class="text-center">
       {{ subtitle }}
     </p>
 
-    <div class="products-home__carousel">
-      <div
-        class="
-          products-home__carousel-arrow products-home__carousel-arrow--left
-        "
-        @click="showPrev"
-      >
-        <i class="iconify" data-icon="mdi-chevron-left"></i>
-      </div>
-
-      <VueSlickCarousel
+    <div class="position-relative px-3 mt-4">
+      <canidelo-carousel
         v-if="products.length"
-        :ref="`carousel${section}`"
-        v-bind="carouselOptions"
+        :custom-ref="`carousel${section}`"
+        :options="carouselOptions"
+        arrow-light
       >
         <ProductGrid
           v-for="product in products"
           :key="product.id"
           :product="product"
         />
-      </VueSlickCarousel>
-
-      <div
-        class="
-          products-home__carousel-arrow products-home__carousel-arrow--right
-        "
-        @click="showNext"
-      >
-        <i class="iconify" data-icon="mdi-chevron-right"></i>
-      </div>
+      </canidelo-carousel>
     </div>
   </section>
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
-
 import ProductGrid from "./products/ProductGrid.vue";
+import CanideloCarousel from "./core/CanideloCarousel.vue";
 
 export default {
   name: "products-home",
 
   components: {
-    VueSlickCarousel,
     ProductGrid,
+    CanideloCarousel,
   },
 
   props: {
@@ -134,45 +116,9 @@ export default {
     loadProducts() {
       this.$store.dispatch("products/get", this.section);
     },
-
-    showPrev() {
-      this.$refs[`carousel${this.section}`].prev();
-    },
-
-    showNext() {
-      this.$refs[`carousel${this.section}`].next();
-    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../../sass/components/productsHome.scss";
-</style>
-
-<style lang="scss">
-.products-home {
-  .slick-slide {
-    padding: 0 9px;
-  }
-
-  .slick-dots {
-    bottom: -35px;
-
-    li {
-      button {
-        &:before {
-          font-size: 10px;
-        }
-      }
-      &.slick-active {
-        button {
-          &:before {
-            font-size: 15px;
-          }
-        }
-      }
-    }
-  }
-}
 </style>
