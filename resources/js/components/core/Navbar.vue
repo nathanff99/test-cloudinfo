@@ -73,11 +73,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <mobile-off-canvas />
+      <MobileOffCanvas />
     </nav>
 
     <transition name="fade">
-      <mega-menu v-if="showMegaMenu" />
+      <MegaMenu v-if="showMegaMenu" />
     </transition>
   </header>
 </template>
