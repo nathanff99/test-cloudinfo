@@ -5,7 +5,7 @@
     </h1>
     <div class="search-home__form">
       <div class="row justify-content-center row">
-        <div class="col-12 col-lg-9 col-xxl-9">
+        <div class="col-12 col-lg-9 col-xxl-10">
           <div class="input-group mb-3">
             <span class="input-group-text text-primary bg-white border-0">
               <i class="iconify rotate" data-icon="mdi-magnify"></i>
