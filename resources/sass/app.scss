@@ -11,3 +11,17 @@
     @include make-container();
     max-width: 1700px;
 }
+
+a {
+    text-decoration: none;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.7s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}

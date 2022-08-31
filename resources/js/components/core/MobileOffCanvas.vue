@@ -6,7 +6,7 @@
     aria-labelledby="offcanvasNavbarLabel"
   >
     <div class="offcanvas-header">
-      <img src="/images/logo.webp" alt="Farmácia Canidelo" />
+      <img src="/images/logo-white.webp" alt="Farmácia Canidelo" />
       <button
         type="button"
         class="btn-close"
@@ -15,42 +15,54 @@
       ></button>
     </div>
     <div class="offcanvas-body">
-      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown
+      <ul class="offcanvas__list list-unstyled">
+        <li>
+          <a href="#">
+            <i class="iconify" data-icon="mdi-account-outline"></i> Olá Nelma
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="iconify" data-icon="mdi-cart-outline"></i> Carrinho
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="iconify" data-icon="mdi-cards-heart-outline"></i>
+            Favoritos
+          </a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+
+      <ul class="offcanvas__list list-unstyled">
+        <li>
+          <a href="#" @click="showCategories = !showCategories">
+            Categorias
+            <i class="iconify" data-icon="mdi-chevron-down"></i>
+          </a>
+        </li>
+        <transition name="fade">
+          <li v-if="showCategories">
+            <ul class="offcanvas__categories list-unstyled">
+              <li v-for="(category, index) in 5" :key="index">
+                <a href="#">&bull; Categoria</a>
+              </li>
+            </ul>
+          </li>
+        </transition>
+        <li>
+          <a href="#"> Promoções </a>
+        </li>
+        <li>
+          <a href="#"> Marcas </a>
+        </li>
+        <li>
+          <a href="#"> Receita Médica </a>
+        </li>
+        <li>
+          <a href="#"> Blog </a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -58,8 +70,57 @@
 <script>
 export default {
   name: "mobile-off-canvas",
+
+  data() {
+    return {
+      showCategories: false,
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+.offcanvas {
+  &-header {
+    background-color: var(--bs-primary);
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  &__list {
+    font-size: 16px;
+
+    &:first-child:after {
+      content: "";
+      border-bottom: 1px solid #dbd9d9;
+      height: 1px;
+      width: 100%;
+      display: block;
+      margin: 16px 0;
+    }
+
+    li {
+      margin: 10px 0;
+
+      a {
+        align-items: center;
+        display: flex;
+
+        svg {
+          margin-right: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  &__categories {
+    background: #ebebeb;
+    padding: 5px 20px;
+  }
+}
 </style>
