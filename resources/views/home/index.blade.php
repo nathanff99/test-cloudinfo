@@ -16,4 +16,6 @@
     </products-home>
 
     <blog-home></blog-home>
+    
+    <partners-home :partners="{{ $partners }}"></partners-home>
 @endsection
