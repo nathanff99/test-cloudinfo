@@ -4,29 +4,48 @@
     data-bs-ride="carousel"
     class="banner-full-width carousel slide"
   >
-    <div class="carousel-inner">
-      <div
-        v-for="(banner, index) in banners"
-        :key="banner.id"
-        class="carousel-item"
-        :class="{ active: index === 0 }"
-      >
+    <VueSlickCarousel v-bind="carouselOptions">
+      <div v-for="banner in banners" :key="banner.id">
         <img :src="banner.src" class="d-block w-100" :alt="banner.title" />
       </div>
-    </div>
+    </VueSlickCarousel>
   </section>
 </template>
 
 <script>
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+
 export default {
   name: "banner-full-width",
 
+  components: {
+    VueSlickCarousel,
+  },
+
   props: {
-    // { id, title, src }
     banners: {
       type: Array,
       required: true,
     },
+  },
+
+  data() {
+    return {
+      carouselOptions: {
+        dots: true,
+        arrows: false,
+        infinite: true,
+        fade: true,
+        speed: 1000,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 0,
+      },
+    };
   },
 };
 </script>
@@ -37,6 +56,29 @@ export default {
 
   @media (min-width: 532px) {
     margin-top: 155px;
+  }
+}
+</style>
+
+<style lang="scss">
+.banner-full-width {
+  .slick-dots {
+    bottom: 10px;
+
+    li {
+      button {
+        &:before {
+          font-size: 10px;
+        }
+      }
+      &.slick-active {
+        button {
+          &:before {
+            font-size: 15px;
+          }
+        }
+      }
+    }
   }
 }
 </style>
