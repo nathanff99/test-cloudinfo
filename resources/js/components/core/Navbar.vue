@@ -17,7 +17,7 @@
       </ul>
     </div>
 
-    <nav class="navbar container-fluid py-3 bg-white">
+    <nav class="navbar canidelo-container py-3 bg-white">
       <a class="navbar-brand" href="#">
         <img src="/images/logo.webp" alt="Farmácia Canidelo" />
       </a>

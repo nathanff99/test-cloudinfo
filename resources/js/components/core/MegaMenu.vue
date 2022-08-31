@@ -29,5 +29,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../../sass/components/megamenu.scss';
+@import '../../../sass/components/megaMenu.scss';
 </style>
