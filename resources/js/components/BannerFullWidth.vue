@@ -1,27 +1,26 @@
 <template>
-  <section
-    id="carouselBannerHome"
-    data-bs-ride="carousel"
-    class="banner-full-width carousel slide"
-  >
-    <VueSlickCarousel v-bind="carouselOptions">
+  <section class="banner-full-width">
+    <canidelo-carousel
+      v-if="banners.length"
+      custom-ref="carouselBanners"
+      :custom-arrows="false"
+      :options="carouselOptions"
+    >
       <div v-for="banner in banners" :key="banner.id">
         <img :src="banner.img_src" class="d-block w-100" :alt="banner.title" />
       </div>
-    </VueSlickCarousel>
+    </canidelo-carousel>
   </section>
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import CanideloCarousel from "./core/CanideloCarousel.vue";
 
 export default {
   name: "banner-full-width",
 
   components: {
-    VueSlickCarousel,
+    CanideloCarousel,
   },
 
   props: {
@@ -62,23 +61,12 @@ export default {
 
 <style lang="scss">
 .banner-full-width {
+  .slick-slide {
+    padding: 0;
+  }
+
   .slick-dots {
     bottom: 10px;
-
-    li {
-      button {
-        &:before {
-          font-size: 10px;
-        }
-      }
-      &.slick-active {
-        button {
-          &:before {
-            font-size: 15px;
-          }
-        }
-      }
-    }
   }
 }
 </style>

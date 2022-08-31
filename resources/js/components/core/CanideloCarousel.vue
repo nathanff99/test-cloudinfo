@@ -1,7 +1,7 @@
 <template>
   <div class="canidelo-carousel">
     <div
-      v-if="customArrow"
+      v-if="customArrows"
       class="canidelo-carousel__arrow canidelo-carousel__arrow--left"
       :class="{ 'canidelo-carousel__arrow--light': arrowLight }"
       @click="showPrev"
@@ -14,7 +14,7 @@
     </VueSlickCarousel>
 
     <div
-      v-if="customArrow"
+      v-if="customArrows"
       class="canidelo-carousel__arrow canidelo-carousel__arrow--right"
       :class="{ 'canidelo-carousel__arrow--light': arrowLight }"
       @click="showNext"
@@ -41,7 +41,7 @@ export default {
       type: String,
       required: true,
     },
-    customArrow: {
+    customArrows: {
       type: Boolean,
       default: true,
     },
