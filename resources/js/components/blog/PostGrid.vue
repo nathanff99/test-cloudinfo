@@ -1,23 +1,29 @@
 <template>
-  <div class="post-grid">
-    <img class="post-grid__image w-100" :src="post.img_src" :alt="post.title" />
+  <article class="post-grid">
+    <a href="#">
+      <img
+        class="post-grid__image w-100"
+        :src="post.img_src"
+        :alt="post.title"
+      />
 
-    <div class="p-4">
-      <div class="d-flex justify-content-between mb-2">
-        <span class="text-primary text-uppercase fw-semibold">
-          {{ post.category }}
-        </span>
-        <span class="post-grid__date fw-semibold">{{ post.date }}</span>
+      <div class="p-4">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="text-primary text-uppercase fw-semibold">
+            {{ post.category }}
+          </span>
+          <span class="post-grid__date fw-semibold">{{ post.date }}</span>
+        </div>
+
+        <h5 class="fs-2 fw-bolder mb-0">{{ post.title }}</h5>
+        <p class="fs-4 fw-light mb-0">{{ post.subtitle }}</p>
+
+        <p class="post-grid__description fw-semibold mt-3">
+          {{ post.description }}
+        </p>
       </div>
-
-      <h5 class="fs-2 fw-bolder mb-0">{{ post.title }}</h5>
-      <p class="fs-4 fw-light mb-0">{{ post.subtitle }}</p>
-
-      <p class="post-grid__description fw-semibold mt-3">
-        {{ post.description }}
-      </p>
-    </div>
-  </div>
+    </a>
+  </article>
 </template>
 
 <script>
@@ -34,13 +40,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import "../../../sass/components/postGrid.scss";
-
 .post-grid {
   position: relative;
   height: 535px;
   border-radius: 8px;
   background-color: #f0f0f0;
+
+  a {
+    color: var(--bs-body-color);
+  }
 
   &__image {
     object-fit: cover;
