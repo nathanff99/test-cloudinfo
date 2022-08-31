@@ -5,7 +5,7 @@
         "price": 18.50,
         "discount": 20,
         "stock": 100,
-        "img_src": "/images/test-product-blue.webp"
+        "img_src": "/images/products/test-product-blue.webp"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "price": 20,
         "discount": 15,
         "stock": 100,
-        "img_src": "/images/test-product-blue.webp"
+        "img_src": "/images/products/test-product-blue.webp"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "price": 25,
         "discount": 0,
         "stock": 0,
-        "img_src": "/images/test-product-green.webp"
+        "img_src": "/images/products/test-product-green.webp"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "price": 22,
         "discount": 0,
         "stock": 100,
-        "img_src": "/images/test-product-orange.webp"
+        "img_src": "/images/products/test-product-orange.webp"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "price": 22,
         "discount": 20,
         "stock": 100,
-        "img_src": "/images/test-product-orange.webp"
+        "img_src": "/images/products/test-product-orange.webp"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "price": 22,
         "discount": 0,
         "stock": 100,
-        "img_src": "/images/test-product-orange.webp"
+        "img_src": "/images/products/test-product-orange.webp"
     },
     {
         "id": 7,
@@ -53,6 +53,6 @@
         "price": 18.50,
         "discount": 20,
         "stock": 100,
-        "img_src": "/images/test-product-blue.webp"
+        "img_src": "/images/products/test-product-blue.webp"
     }
 ]
