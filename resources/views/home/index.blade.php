@@ -14,4 +14,6 @@
 
     <products-home section="suggestions" title="Sugestões">
     </products-home>
+
+    <blog-home></blog-home>
 @endsection
