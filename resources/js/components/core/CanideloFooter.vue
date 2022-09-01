@@ -103,8 +103,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import '../../../sass/components/footer.scss';
-
 .canidelo-footer {
   background: #50ae32;
 
