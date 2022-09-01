@@ -20,7 +20,7 @@
 
     <meta property="og:title" content="Farmácia Canídelo">
     <meta property="og:image" content="{{ asset('images/logo.webp') }}" />
-    <meta property="og:image:alt" content="JBS Pack">
+    <meta property="og:image:alt" content="Farmácia Canídelo">
     <meta property="og:description"
         content="Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum">
 
