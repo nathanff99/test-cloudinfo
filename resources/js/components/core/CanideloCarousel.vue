@@ -6,10 +6,16 @@
       :class="{ 'canidelo-carousel__arrow--light': arrowLight }"
       @click="showPrev"
     >
-      <i class="iconify" data-icon="mdi-chevron-left"></i>
+      <i
+        class="iconify"
+        data-icon="mdi-chevron-left"
+      />
     </div>
 
-    <VueSlickCarousel :ref="customRef" v-bind="options">
+    <VueSlickCarousel
+      :ref="customRef"
+      v-bind="options"
+    >
       <slot />
     </VueSlickCarousel>
 
@@ -19,52 +25,55 @@
       :class="{ 'canidelo-carousel__arrow--light': arrowLight }"
       @click="showNext"
     >
-      <i class="iconify" data-icon="mdi-chevron-right"></i>
+      <i
+        class="iconify"
+        data-icon="mdi-chevron-right"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
-  name: "canidelo-carousel",
+  name: 'CanideloCarousel',
 
   components: {
-    VueSlickCarousel,
+    VueSlickCarousel
   },
 
   props: {
     customRef: {
       type: String,
-      required: true,
+      required: true
     },
     customArrows: {
       type: Boolean,
-      default: true,
+      default: true
     },
     arrowLight: {
       type: Boolean,
-      default: false,
+      default: false
     },
     options: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
 
   methods: {
     showPrev() {
-      this.$refs[this.customRef].prev();
+      this.$refs[this.customRef].prev()
     },
 
     showNext() {
-      this.$refs[this.customRef].next();
-    },
-  },
-};
+      this.$refs[this.customRef].next()
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

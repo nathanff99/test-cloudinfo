@@ -12,7 +12,10 @@
       "
       @click="showChat = !showChat"
     >
-      <i class="iconify fs-3 me-3" data-icon="mdi-email-outline"></i>
+      <i
+        class="iconify fs-3 me-3"
+        data-icon="mdi-email-outline"
+      />
       Apoio Farmacêutico
     </div>
 
@@ -22,25 +25,34 @@
       @submit.prevent="initChat"
     >
       <input
+        v-model="name"
         type="text"
         class="form-control border-0 shadow-none mb-3"
         placeholder="Preencha seu nome"
-        v-model="name"
         required
-      />
+      >
       <input
         type="email"
         class="form-control border-0 shadow-none mb-3"
         placeholder="Preencha seu e-mail"
         required
-      />
+      >
 
-      <button class="btn text-white w-100">Iniciar atendimento</button>
+      <button class="btn text-white w-100">
+        Iniciar atendimento
+      </button>
     </form>
 
-    <div v-if="inConversation && showChat" class="bg-white p-3">
+    <div
+      v-if="inConversation && showChat"
+      class="bg-white p-3"
+    >
       <div class="canidelo-help__transcript d-flex flex-column overflow-auto">
-        <div v-for="(data, index) in transcript" :key="index" class="mb-2">
+        <div
+          v-for="(data, index) in transcript"
+          :key="index"
+          class="mb-2"
+        >
           <small
             class="d-flex fw-semibold mb-1"
             :class="{ 'justify-content-end': data.type === 'user' }"
@@ -62,13 +74,19 @@
 
       <div class="input-group">
         <input
+          v-model="message"
           type="text"
           class="form-control border-0 shadow-none"
           placeholder="Escreva sua mensagem"
-          v-model="message"
-        />
-        <button class="btn text-white" @click="fakeAlert()">
-          <i class="iconify" data-icon="mdi-send-outline"></i>
+        >
+        <button
+          class="btn text-white"
+          @click="fakeAlert()"
+        >
+          <i
+            class="iconify"
+            data-icon="mdi-send-outline"
+          />
         </button>
       </div>
     </div>
@@ -77,72 +95,72 @@
 
 <script>
 export default {
-  name: "canidelo-help",
+  name: 'CanideloHelp',
 
   data() {
     return {
       showChat: false,
       inConversation: false,
-      name: "",
-      message: "",
-      transcript: [],
-    };
+      name: '',
+      message: '',
+      transcript: []
+    }
   },
 
   created() {
     setTimeout(() => {
       if (!this.showChat) {
-        this.showChat = true;
+        this.showChat = true
       }
-    }, 10000);
+    }, 10000)
   },
 
   methods: {
     async initChat() {
-      this.inConversation = true;
+      this.inConversation = true
 
       this.transcript.push({
-        name: "Farma Bot",
-        type: "bot",
-        message: `Bem vindo ${this.name}!`,
-      });
+        name: 'Farma Bot',
+        type: 'bot',
+        message: `Bem vindo ${this.name}!`
+      })
 
       this.transcript.push({
         name: this.name,
-        type: "user",
-        message: "Gostaria da ajuda de um farmacêutico.",
-      });
+        type: 'user',
+        message: 'Gostaria da ajuda de um farmacêutico.'
+      })
 
       await this.writing(3000).finally(() => {
-        this.transcript.splice(-1);
+        this.transcript.splice(-1)
         this.transcript.push({
-          name: "Farma Bot",
-          type: "bot",
+          name: 'Farma Bot',
+          type: 'bot',
           message:
-            "Aguarde, um de nossos farmacêuticos já irá lhe atender. Posição na fila: 10.",
-        });
-      });
+            'Aguarde, um de nossos farmacêuticos já irá lhe atender. Posição na fila: 10.'
+        })
+      })
     },
 
     writing(time) {
       return new Promise((resolve) => {
         this.transcript.push({
-          name: "Farma Bot",
-          type: "bot",
-          message: "...",
-        });
+          name: 'Farma Bot',
+          type: 'bot',
+          message: '...'
+        })
         setTimeout(() => {
-          resolve();
-        }, time);
-      });
+          resolve()
+        }, time)
+      })
     },
 
     fakeAlert() {
-      this.message = "";
-      alert("Chat fake não funcional.");
-    },
-  },
-};
+      this.message = ''
+      alert('Chat fake não funcional.')
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

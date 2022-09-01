@@ -1,7 +1,11 @@
 <template>
   <div class="mega-menu d-none d-xl-flex">
     <div class="container">
-      <ul v-for="(list, index) in 5" :key="index" class="mega-menu__list">
+      <ul
+        v-for="(list, index) in 5"
+        :key="index"
+        class="mega-menu__list"
+      >
         <li class="mega-menu__list-item mega-menu__list-item--primary">
           <strong> Categoria </strong>
         </li>
@@ -24,8 +28,8 @@
 
 <script>
 export default {
-  name: "mega-menu",
-};
+  name: 'MegaMenu'
+}
 </script>
 
 <style lang="scss" scoped>

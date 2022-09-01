@@ -11,7 +11,11 @@
           custom-ref="carouselPosts"
           :options="carouselOptions"
         >
-          <PostGrid v-for="post in posts" :key="post.id" :post="post" />
+          <PostGrid
+            v-for="post in posts"
+            :key="post.id"
+            :post="post"
+          />
         </canidelo-carousel>
       </div>
     </section>
@@ -19,15 +23,15 @@
 </template>
 
 <script>
-import PostGrid from "./blog/PostGrid.vue";
-import CanideloCarousel from "./core/CanideloCarousel.vue";
+import PostGrid from './blog/PostGrid.vue'
+import CanideloCarousel from './core/CanideloCarousel.vue'
 
 export default {
-  name: "blog-home",
+  name: 'BlogHome',
 
   components: {
     PostGrid,
-    CanideloCarousel,
+    CanideloCarousel
   },
 
   data() {
@@ -44,59 +48,59 @@ export default {
           {
             breakpoint: 1500,
             settings: {
-              slidesToShow: 3,
-            },
+              slidesToShow: 3
+            }
           },
           {
             breakpoint: 1200,
             settings: {
-              slidesToShow: 2,
-            },
+              slidesToShow: 2
+            }
           },
           {
             breakpoint: 991,
             settings: {
               slidesToShow: 2,
               initialSlide: 1,
-              dots: true,
-            },
+              dots: true
+            }
           },
           {
             breakpoint: 768,
             settings: {
               slidesToShow: 1,
               initialSlide: 1,
-              dots: true,
-            },
+              dots: true
+            }
           },
           {
             breakpoint: 576,
             settings: {
               slidesToShow: 1,
-              dots: true,
-            },
-          },
-        ],
-      },
-    };
+              dots: true
+            }
+          }
+        ]
+      }
+    }
   },
 
   computed: {
     posts() {
-      return this.$store.getters[`blog/posts`];
-    },
+      return this.$store.getters['blog/posts']
+    }
   },
 
   created() {
-    this.loadPosts();
+    this.loadPosts()
   },
 
   methods: {
     loadPosts() {
-      this.$store.dispatch("blog/getPosts");
-    },
-  },
-};
+      this.$store.dispatch('blog/getPosts')
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

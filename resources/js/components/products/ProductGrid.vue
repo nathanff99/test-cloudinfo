@@ -8,14 +8,17 @@
     </div>
 
     <div class="product-grid__favorite">
-      <i class="iconify" data-icon="mdi-heart-outline"></i>
+      <i
+        class="iconify"
+        data-icon="mdi-heart-outline"
+      />
     </div>
 
     <img
       class="product-grid__image"
       :src="product.img_src"
       :alt="product.title"
-    />
+    >
 
     <div class="product-grid__details text-center">
       <h5 class="product-grid__details-title">
@@ -59,22 +62,22 @@
 
 <script>
 export default {
-  name: "product-grid",
+  name: 'ProductGrid',
 
   props: {
     product: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
 
   methods: {
     formatPrice(value) {
-      let val = (value / 1).toFixed(2);
-      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    },
-  },
-};
+      let val = (value / 1).toFixed(2)
+      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

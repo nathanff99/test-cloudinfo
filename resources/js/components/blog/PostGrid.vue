@@ -5,7 +5,7 @@
         class="post-grid__image w-100"
         :src="post.img_src"
         :alt="post.title"
-      />
+      >
 
       <div class="p-4">
         <div class="d-flex justify-content-between mb-2">
@@ -28,15 +28,15 @@
 
 <script>
 export default {
-  name: "post-grid",
+  name: 'PostGrid',
 
   props: {
     post: {
       type: Object,
-      required: true,
-    },
-  },
-};
+      required: true
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

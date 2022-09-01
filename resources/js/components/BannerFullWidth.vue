@@ -6,28 +6,35 @@
       :custom-arrows="false"
       :options="carouselOptions"
     >
-      <div v-for="banner in banners" :key="banner.id">
-        <img :src="banner.img_src" class="d-block w-100" :alt="banner.title" />
+      <div
+        v-for="banner in banners"
+        :key="banner.id"
+      >
+        <img
+          :src="banner.img_src"
+          class="d-block w-100"
+          :alt="banner.title"
+        >
       </div>
     </canidelo-carousel>
   </section>
 </template>
 
 <script>
-import CanideloCarousel from "./core/CanideloCarousel.vue";
+import CanideloCarousel from './core/CanideloCarousel.vue'
 
 export default {
-  name: "banner-full-width",
+  name: 'BannerFullWidth',
 
   components: {
-    CanideloCarousel,
+    CanideloCarousel
   },
 
   props: {
     banners: {
       type: Array,
-      default: () => [],
-    },
+      default: () => []
+    }
   },
 
   data() {
@@ -42,11 +49,11 @@ export default {
         autoplaySpeed: 5000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: 0,
-      },
-    };
-  },
-};
+        initialSlide: 0
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

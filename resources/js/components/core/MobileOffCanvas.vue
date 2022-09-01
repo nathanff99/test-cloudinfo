@@ -1,34 +1,46 @@
 <template>
   <div
+    id="offcanvasNavbar"
     class="offcanvas offcanvas-start d-flex d-xl-none"
     tabindex="-1"
-    id="offcanvasNavbar"
     aria-labelledby="offcanvasNavbarLabel"
   >
     <div class="offcanvas-header">
-      <img src="/images/logo-white.webp" alt="Farmácia Canidelo" />
+      <img
+        src="/images/logo-white.webp"
+        alt="Farmácia Canidelo"
+      >
       <button
         type="button"
         class="btn-close"
         data-bs-dismiss="offcanvas"
         aria-label="Close"
-      ></button>
+      />
     </div>
     <div class="offcanvas-body">
       <ul class="offcanvas__list list-unstyled">
         <li>
           <a href="#">
-            <i class="iconify" data-icon="mdi-account-outline"></i> Olá Nelma
+            <i
+              class="iconify"
+              data-icon="mdi-account-outline"
+            /> Olá Nelma
           </a>
         </li>
         <li>
           <a href="#">
-            <i class="iconify" data-icon="mdi-cart-outline"></i> Carrinho
+            <i
+              class="iconify"
+              data-icon="mdi-cart-outline"
+            /> Carrinho
           </a>
         </li>
         <li>
           <a href="#">
-            <i class="iconify" data-icon="mdi-cards-heart-outline"></i>
+            <i
+              class="iconify"
+              data-icon="mdi-cards-heart-outline"
+            />
             Favoritos
           </a>
         </li>
@@ -36,15 +48,24 @@
 
       <ul class="offcanvas__list list-unstyled">
         <li>
-          <a href="#" @click="showCategories = !showCategories">
+          <a
+            href="#"
+            @click="showCategories = !showCategories"
+          >
             Categorias
-            <i class="iconify" data-icon="mdi-chevron-down"></i>
+            <i
+              class="iconify"
+              data-icon="mdi-chevron-down"
+            />
           </a>
         </li>
         <transition name="fade">
           <li v-if="showCategories">
             <ul class="offcanvas__categories list-unstyled">
-              <li v-for="(category, index) in 5" :key="index">
+              <li
+                v-for="(category, index) in 5"
+                :key="index"
+              >
                 <a href="#">&bull; Categoria</a>
               </li>
             </ul>
@@ -69,14 +90,14 @@
 
 <script>
 export default {
-  name: "mobile-off-canvas",
+  name: 'MobileOffCanvas',
 
   data() {
     return {
-      showCategories: false,
-    };
-  },
-};
+      showCategories: false
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -3,37 +3,64 @@
     <div class="canidelo-navbar__features">
       <ul class="mb-0">
         <li>
-          <i class="iconify" data-icon="mdi-truck-fast-outline"></i> Portes
+          <i
+            class="iconify"
+            data-icon="mdi-truck-fast-outline"
+          /> Portes
           Grátis a partir de 50€ *
         </li>
         <li>
-          <i class="iconify" data-icon="mdi-cart-outline"></i> Expedição em
+          <i
+            class="iconify"
+            data-icon="mdi-cart-outline"
+          /> Expedição em
           24/48h
         </li>
         <li>
-          <i class="iconify rotate" data-icon="mdi-phone-outline"></i> 913 213
+          <i
+            class="iconify rotate"
+            data-icon="mdi-phone-outline"
+          /> 913 213
           321
         </li>
       </ul>
     </div>
 
     <nav class="navbar canidelo-container py-3 bg-white">
-      <a class="navbar-brand" href="#">
-        <img src="/images/logo.webp" alt="Farmácia Canidelo" />
+      <a
+        class="navbar-brand"
+        href="#"
+      >
+        <img
+          src="/images/logo.webp"
+          alt="Farmácia Canidelo"
+        >
       </a>
 
       <ul class="nav justify-content-center d-none d-xl-flex">
         <li class="nav-item">
-          <a class="nav-link" @click="showMegaMenu = !showMegaMenu">
+          <a
+            class="nav-link"
+            @click="showMegaMenu = !showMegaMenu"
+          >
             Categorias
-            <i class="iconify" data-icon="mdi-chevron-down"></i>
+            <i
+              class="iconify"
+              data-icon="mdi-chevron-down"
+            />
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Promoções</a>
+          <a
+            class="nav-link"
+            href="#"
+          >Promoções</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Marcas</a>
+          <a
+            class="nav-link"
+            href="#"
+          >Marcas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link">Receita Médica</a>
@@ -47,18 +74,26 @@
         <ul class="mb-0">
           <li>
             <a href="#">
-              <i class="iconify" data-icon="mdi-account-outline"></i> Olá Nelma
+              <i
+                class="iconify"
+                data-icon="mdi-account-outline"
+              /> Olá Nelma
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="iconify" data-icon="mdi-cart-outline"></i>
+              <i
+                class="iconify"
+                data-icon="mdi-cart-outline"
+              />
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="iconify" data-icon="mdi-cards-heart-outline"> </i
-            ></a>
+              <i
+                class="iconify"
+                data-icon="mdi-cards-heart-outline"
+              /></a>
           </li>
         </ul>
       </div>
@@ -70,7 +105,7 @@
         data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" />
       </button>
 
       <MobileOffCanvas />
@@ -83,23 +118,23 @@
 </template>
 
 <script>
-import MobileOffCanvas from "./MobileOffCanvas.vue";
-import MegaMenu from "./MegaMenu.vue";
+import MobileOffCanvas from './MobileOffCanvas.vue'
+import MegaMenu from './MegaMenu.vue'
 
 export default {
-  name: "canidelo-navbar",
+  name: 'CanideloNavbar',
 
   components: {
     MobileOffCanvas,
-    MegaMenu,
+    MegaMenu
   },
 
   data() {
     return {
-      showMegaMenu: false,
-    };
-  },
-};
+      showMegaMenu: false
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

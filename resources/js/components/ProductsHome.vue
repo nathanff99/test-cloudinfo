@@ -3,7 +3,10 @@
     <h2 class="text-center text-uppercase fw-semibold text-primary mb-2">
       {{ title }}
     </h2>
-    <p v-if="subtitle" class="text-center">
+    <p
+      v-if="subtitle"
+      class="text-center"
+    >
       {{ subtitle }}
     </p>
 
@@ -25,30 +28,30 @@
 </template>
 
 <script>
-import ProductGrid from "./products/ProductGrid.vue";
-import CanideloCarousel from "./core/CanideloCarousel.vue";
+import ProductGrid from './products/ProductGrid.vue'
+import CanideloCarousel from './core/CanideloCarousel.vue'
 
 export default {
-  name: "products-home",
+  name: 'ProductsHome',
 
   components: {
     ProductGrid,
-    CanideloCarousel,
+    CanideloCarousel
   },
 
   props: {
     section: {
       type: String,
-      required: true,
+      required: true
     },
     title: {
       type: String,
-      required: true,
+      required: true
     },
     subtitle: {
       type: String,
-      default: "",
-    },
+      default: ''
+    }
   },
 
   data() {
@@ -65,59 +68,59 @@ export default {
           {
             breakpoint: 1400,
             settings: {
-              slidesToShow: 4,
-            },
+              slidesToShow: 4
+            }
           },
           {
             breakpoint: 1200,
             settings: {
-              slidesToShow: 3,
-            },
+              slidesToShow: 3
+            }
           },
           {
             breakpoint: 991,
             settings: {
               slidesToShow: 3,
               initialSlide: 1,
-              dots: true,
-            },
+              dots: true
+            }
           },
           {
             breakpoint: 768,
             settings: {
               slidesToShow: 2,
               initialSlide: 1,
-              dots: true,
-            },
+              dots: true
+            }
           },
           {
             breakpoint: 576,
             settings: {
               slidesToShow: 1,
-              dots: true,
-            },
-          },
-        ],
-      },
-    };
+              dots: true
+            }
+          }
+        ]
+      }
+    }
   },
 
   computed: {
     products() {
-      return this.$store.getters[`products/${this.section}`];
-    },
+      return this.$store.getters[`products/${this.section}`]
+    }
   },
 
   created() {
-    this.loadProducts();
+    this.loadProducts()
   },
 
   methods: {
     loadProducts() {
-      this.$store.dispatch("products/get", this.section);
-    },
-  },
-};
+      this.$store.dispatch('products/get', this.section)
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
