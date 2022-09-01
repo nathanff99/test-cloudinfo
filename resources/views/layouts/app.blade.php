@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="pt_PT">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Farmácia Canídelo</title>
+    <meta name="description"
+        content="Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum">
+    <meta name="keywords" content="Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum">
+
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:url" content="{{ request()->fullUrl() }}">
+    <meta property="og:site_name" content="Farmácia Canídelo">
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:type" content="website">
+
+    <meta property="og:title" content="Farmácia Canídelo">
+    <meta property="og:image" content="{{ asset('images/logo.webp') }}" />
+    <meta property="og:image:alt" content="JBS Pack">
+    <meta property="og:description"
+        content="Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum">
+
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('favicons/apple-touch-icon.png') }}">
@@ -23,11 +40,13 @@
 
 <body>
     <div id="app">
-        <navbar></navbar>
+        <canidelo-navbar></canidelo-navbar>
 
         <main>
             @yield('content')
         </main>
+
+        <canidelo-footer></canidelo-footer>
     </div>
 </body>
 

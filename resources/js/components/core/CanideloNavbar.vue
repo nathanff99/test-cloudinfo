@@ -1,6 +1,6 @@
 <template>
-  <header class="custom-navbar fixed-top">
-    <div class="custom-navbar__features">
+  <header class="canidelo-navbar fixed-top">
+    <div class="canidelo-navbar__features">
       <ul class="mb-0">
         <li>
           <i class="iconify" data-icon="mdi-truck-fast-outline"></i> Portes
@@ -43,7 +43,7 @@
         </li>
       </ul>
 
-      <div class="custom-navbar__right d-none d-xl-flex">
+      <div class="canidelo-navbar__right d-none d-xl-flex">
         <ul class="mb-0">
           <li>
             <a href="#">
@@ -87,7 +87,7 @@ import MobileOffCanvas from "./MobileOffCanvas.vue";
 import MegaMenu from "./MegaMenu.vue";
 
 export default {
-  name: "custom-navbar",
+  name: "canidelo-navbar",
 
   components: {
     MobileOffCanvas,
