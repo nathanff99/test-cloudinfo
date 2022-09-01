@@ -8,7 +8,8 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "lint": "eslint --ext .js,.vue resources/js/"
+        "lint": "eslint --ext .js,.vue resources/js/",
+        "postinstall": "npm run prod"
     },
     "devDependencies": {
         "@popperjs/core": "^2.10.2",
