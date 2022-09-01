@@ -10,6 +10,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 // Core Components
 Vue.component('canidelo-navbar', () => import('./components/core/CanideloNavbar.vue'));
 Vue.component('canidelo-footer', () => import('./components/core/CanideloFooter.vue'));
+Vue.component('canidelo-help', () => import('./components/core/CanideloHelp.vue'));
 
 // Home Components
 Vue.component('banner-full-width', () => import('./components/BannerFullWidth.vue'));

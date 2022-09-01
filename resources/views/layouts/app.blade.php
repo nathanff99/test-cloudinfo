@@ -46,6 +46,7 @@
             @yield('content')
         </main>
 
+        <canidelo-help></canidelo-help>
         <canidelo-footer></canidelo-footer>
     </div>
 </body>
